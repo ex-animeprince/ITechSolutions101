@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Computer, laptop and technology accessories available at I-Tech Solutions">
+
+    <title>Products | I-Tech Solutions</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <style>
+
+        /* ==========================================
+           PRODUCT PAGE
+        ========================================== */
+
+        .products-section {
+            padding: 80px 0 100px;
+        }
+
+        .product-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 45px;
+        }
+
+        .filter-btn {
+            padding: 10px 18px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 30px;
+            background: rgba(255,255,255,.04);
+            color: #9ca8c7;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #00d9ff;
+            border-color: #00d9ff;
+            color: #031019;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product-card {
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 20px;
+            background: rgba(255,255,255,.035);
+            transition: .35s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0,217,255,.35);
+            box-shadow: 0 20px 50px rgba(0,0,0,.3);
+        }
+
+        .product-image {
+            height: 210px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(0,217,255,.12),
+                    rgba(0,0,0,.15)
+                );
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.06);
+        }
+
+        .product-placeholder {
+            font-size: 70px;
+            filter: drop-shadow(
+                0 0 15px
+                rgba(0,217,255,.4)
+            );
+        }
+
+        .product-info {
+            padding: 22px;
+        }
+
+        .product-category {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: #00d9ff;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .product-info h3 {
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .product-info p {
+            min-height: 50px;
+            color: #8f9ab5;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .product-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .product-price {
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .product-price small {
+            display: block;
+            color: #65708c;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        .enquire-btn {
+            padding: 9px 13px;
+            border: 1px solid rgba(0,217,255,.3);
+            border-radius: 8px;
+            background: rgba(0,217,255,.06);
+            color: #00d9ff;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .enquire-btn:hover {
+            background: #00d9ff;
+            color: #031019;
+        }
+
+        .product-note {
+            margin-top: 35px;
+            padding: 18px 22px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 14px;
+            background: rgba(255,255,255,.025);
+            color: #7f8ba7;
+            font-size: 13px;
+            text-align: center;
+        }
+
+
+        /* ==========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 1050px) {
+
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 760px) {
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-image {
+                height: 170px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                height: 210px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="tech-background">
+
+    <div class="grid-lines"></div>
+
+    <div class="glow glow-1"></div>
+
+    <div class="glow glow-2"></div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+
+        <a href="../index.html"
+           class="logo">
+
+            <div class="logo-3d">
+             <img src="images/I-Tech_fass-removebg-preview.png" alt="I-Tech Solutions Logo" class="logo-3d">
+                
+
+            </div>
+
+            <div class="logo-text">
+
+                <strong>I-Tech</strong>
+
+                <small>
+                    Solutions
+                </small>
+
+            </div>
+
+        </a>
+
+
+
+        <nav class="navbar">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cyber-security.html">
+                Cyber Security
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <div class="auth-buttons">
+
+            <a href="login.html"
+               class="login-btn">
+
+                Login
+
+            </a>
+
+            <a href="signup.html"
+               class="signup-btn">
+
+                Sign Up
+
+            </a>
+
+        </div>
+
+
+
+        <button class="menu-toggle"
+                id="menuToggle">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<section class="page-hero"
+         style="
+         padding:100px 0 55px;
+         text-align:center;
+         ">
+
+    <div class="container">
+
+        <span class="technology-badge">
+
+            🛒 TECHNOLOGY STORE
+
+        </span>
+
+
+        <h1 style="
+        margin:22px 0 15px;
+        font-size:clamp(42px,7vw,72px);
+        line-height:1;
+        ">
+
+            Our
+            <strong style="color:#00d9ff;">
+                Products
+            </strong>
+
+        </h1>
+
+
+        <p style="
+        max-width:700px;
+        margin:auto;
+        color:#9ca8c7;
+        line-height:1.8;
+        ">
+
+            Computer hardware, laptops, storage,
+            networking equipment, accessories and
+            other technology solutions.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section class="products-section">
+
+    <div class="container">
+
+
+        <!-- FILTER -->
+
+        <div class="product-filter">
+
+            <button
+                class="filter-btn active"
+                data-filter="all">
+
+                All
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="computer">
+
+                Computers
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="laptop">
+
+                Laptops
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="accessory">
+
+                Accessories
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="storage">
+
+                Storage
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="network">
+
+                Networking
+
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCT GRID -->
+
+        <div class="products-grid"
+             id="productsGrid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <article class="product-card"
+                     data-category="computer">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        🖥️
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Computer
+                    </span>
+
+                    <h3>
+                        Desktop PC
+                    </h3>
+
+                    <p>
+                        Reliable desktop systems for
+                        home, office and professional use.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+
+                            Custom
+
+                            <small>
+                                Configuration
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="enquire-btn"
+                            data-product="Desktop PC">
+
+                            Enquire
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <article class="product-card"
+                     data-category="laptop">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        💻
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Laptop
+                    </span>
+
+                    <h3>
+                        Performance Laptop
+                    </h3>
+
+                    <p>
+                        Modern laptops for study, work,
+                        business and everyday computing.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+
+                            Custom
+
+                            <small>
+                                Based on model
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="enquire-btn"
+                            data-product="Performance Laptop">
+
+                            Enquire
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <article class="product-card"
+                     data-category="accessory">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        ⌨️
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Accessories
+                    </span>
+
+                    <h3>
+                        Keyboard & Mouse
+                    </h3>
+
+                    <p>
+                        Wired and wireless keyboard and
+                        mouse combinations.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+
+                            Available
+
+                            <small>
+                                Multiple options
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="enquire-btn"
+                            data-product="Keyboard and Mouse">
+
+                            Enquire
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 4 -->
+
+            <article class="product-card"
+                     data-category="storage">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        💾
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Storage
+                    </span>
+
+                    <h3>
+                        SSD Storage
+                    </h3>
+
+                    <p>
+                        Fast SSD storage solutions for
+                        desktops and laptops.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+
+                            Available
+
+                            <small>
+                                Multiple capacities
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="enquire-btn"
+                            data-product="SSD Storage">
+
+                            Enquire
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 5 -->
+
+            <article class="product-card"
+                     data-category="storage">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        💽
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Storage
+                    </span>
+
+                    <h3>
+                        External Hard Drive
+                    </h3>
+
+                    <p>
+                        Portable storage for backup and
+                        everyday data management.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+
+                            Available
+
+                            <small>
+                                Multiple capacities
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="enquire-btn"
+                            data-product="External Hard Drive">
+
+                            Enquire
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 6 -->
+
+            <article class="product-card"
+                     data-category="network">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        📡
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Networking
+                    </span>
+
+                    <h3>
+                        Wi-Fi Router
+                    </h3>
+
+                    <p>
+                        Networking equipment for home
+                        and office connectivity.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+
+                            Available
+
+                            <small>
+                                Multiple models
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="enquire-btn"
+                            data-product="Wi-Fi Router">
+
+                            Enquire
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 7 -->
+
+            <article class="product-card"
+                     data-category="accessory">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        🎧
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Accessories
+                    </span>
+
+                    <h3>
+                        Headset
+                    </h3>
+
+                    <p>
+                        Computer headsets for calls,
+                        meetings, gaming and entertainment.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+
+                            Available
+
+                            <small>
+                                Multiple options
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="enquire-btn"
+                            data-product="Computer Headset">
+
+                            Enquire
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 8 -->
+
+            <article class="product-card"
+                     data-category="accessory">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        🔌
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Accessories
+                    </span>
+
+                    <h3>
+                        Computer Cables
+                    </h3>
+
+                    <p>
+                        HDMI, USB, power and other
+                        computer connectivity cables.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+
+                            Available
+
+                            <small>
+                                Multiple types
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="enquire-btn"
+                            data-product="Computer Cables">
+
+                            Enquire
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+
+        <div class="product-note">
+
+            💡 Product availability, models and prices
+            may change. Contact I-Tech Solutions for
+            current stock and pricing.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section style="padding:0 0 100px;">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <div class="cta-content">
+
+                <div>
+
+                    <span>
+                        NEED HELP?
+                    </span>
+
+                    <h2>
+                        Can't find what
+                        <strong>you need?</strong>
+                    </h2>
+
+                    <p>
+                        Contact us and tell us what
+                        hardware or accessory you're
+                        looking for.
+                    </p>
+
+                </div>
+
+                <a href="contact.html"
+                   class="primary-btn">
+
+                    Contact Us →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-column">
+
+                <div class="footer-logo">
+
+                    <div class="logo-3d">
+
+                        <span>I</span>
+                        <span>-</span>
+                        <span>T</span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            I-Tech Solutions
+                        </strong>
+
+                        <small>
+                            TECHNOLOGY • REPAIR • SECURITY
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Computer repair, software solutions,
+                    accessories and technology support.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    QUICK LINKS
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    PRODUCTS
+                </h3>
+
+                <a href="products.html">
+                    Computers
+                </a>
+
+                <a href="products.html">
+                    Laptops
+                </a>
+
+                <a href="products.html">
+                    Accessories
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    SUPPORT
+                </h3>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="cyber-security.html">
+                    Cyber Security
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            ©
+            <span id="currentYear"></span>
+
+            I-Tech Solutions.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../js/script.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* ==========================================
+           PRODUCT FILTER
+        ========================================== */
+
+        const filterButtons =
+            document.querySelectorAll(
+                ".filter-btn"
+            );
+
+
+        const products =
+            document.querySelectorAll(
+                ".product-card"
+            );
+
+
+        filterButtons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+
+                        filterButtons.forEach(
+                            function (btn) {
+
+                                btn.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        button.classList.add(
+                            "active"
+                        );
+
+
+                        const filter =
+                            button.dataset.filter;
+
+
+                        products.forEach(
+                            function (product) {
+
+                                const category =
+                                    product.dataset.category;
+
+
+                                if (
+                                    filter === "all" ||
+                                    category === filter
+                                ) {
+
+                                    product.style.display =
+                                        "block";
+
+                                } else {
+
+                                    product.style.display =
+                                        "none";
+
+                                }
+
+                            }
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /* ==========================================
+           PRODUCT ENQUIRY
+        ========================================== */
+
+        const enquiryButtons =
+            document.querySelectorAll(
+                ".enquire-btn"
+            );
+
+
+        enquiryButtons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const product =
+                            button.dataset.product;
+
+
+                        const contactUrl =
+                            "contact.html?product=" +
+                            encodeURIComponent(
+                                product
+                            );
+
+
+                        window.location.href =
+                            contactUrl;
+
+                    }
+                );
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

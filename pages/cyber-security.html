@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="I-Tech Solutions cyber security awareness, computer protection, account security and safe technology services.">
+
+    <title>Cyber Security | I-Tech Solutions</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <style>
+
+        /* =================================================
+           CYBER SECURITY PAGE
+        ================================================= */
+
+        .security-page {
+            padding: 70px 0 100px;
+        }
+
+
+        /* =================================================
+           SECURITY HERO CARD
+        ================================================= */
+
+        .security-hero-card {
+
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+            padding: 55px;
+
+            margin-bottom: 90px;
+
+            border:
+                1px solid
+                rgba(0,217,255,.14);
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,217,255,.07),
+                    rgba(255,255,255,.025)
+                );
+
+            overflow: hidden;
+        }
+
+
+        .security-hero-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 400px;
+
+            height: 400px;
+
+            right: -180px;
+
+            top: -180px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(0,217,255,.06);
+
+            filter:
+                blur(10px);
+        }
+
+
+        .security-content {
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .security-content h2 {
+
+            margin: 18px 0;
+
+            font-size:
+                clamp(30px,5vw,50px);
+
+            line-height: 1.1;
+        }
+
+
+        .security-content h2 strong {
+
+            color: #00d9ff;
+        }
+
+
+        .security-content p {
+
+            color: #9ca8c7;
+
+            line-height: 1.9;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =================================================
+           SECURITY SHIELD
+        ================================================= */
+
+        .security-visual {
+
+            min-height: 350px;
+
+            display: grid;
+
+            place-items: center;
+
+            position: relative;
+        }
+
+
+        .shield {
+
+            position: relative;
+
+            width: 210px;
+
+            height: 250px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(0,217,255,.14),
+                    rgba(0,217,255,.025)
+                );
+
+            clip-path:
+                polygon(
+                    50% 0%,
+                    92% 18%,
+                    86% 65%,
+                    50% 100%,
+                    14% 65%,
+                    8% 18%
+                );
+
+            border:
+                1px solid
+                rgba(0,217,255,.3);
+
+            filter:
+                drop-shadow(
+                    0 0 25px
+                    rgba(0,217,255,.18)
+                );
+
+            animation:
+                shieldFloat 4s ease-in-out infinite;
+        }
+
+
+        .shield::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 15px;
+
+            clip-path:
+                polygon(
+                    50% 0%,
+                    92% 18%,
+                    86% 65%,
+                    50% 100%,
+                    14% 65%,
+                    8% 18%
+                );
+
+            border:
+                1px solid
+                rgba(0,217,255,.2);
+        }
+
+
+        .shield-icon {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-size: 70px;
+
+            filter:
+                drop-shadow(
+                    0 0 15px
+                    rgba(0,217,255,.7)
+                );
+        }
+
+
+        @keyframes shieldFloat {
+
+            0%,100% {
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+                transform:
+                    translateY(-12px);
+            }
+
+        }
+
+
+        /* =================================================
+           SECURITY SERVICES
+        ================================================= */
+
+        .security-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            margin-bottom: 100px;
+        }
+
+
+        .security-card {
+
+            padding: 30px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,.025);
+
+            transition:
+                .35s ease;
+        }
+
+
+        .security-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(0,217,255,.32);
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,.28);
+        }
+
+
+        .security-icon {
+
+            width: 58px;
+
+            height: 58px;
+
+            display: grid;
+
+            place-items: center;
+
+            margin-bottom: 20px;
+
+            border-radius: 15px;
+
+            background:
+                rgba(0,217,255,.07);
+
+            border:
+                1px solid
+                rgba(0,217,255,.2);
+
+            font-size: 26px;
+        }
+
+
+        .security-card h3 {
+
+            margin-bottom: 10px;
+
+            font-size: 19px;
+        }
+
+
+        .security-card p {
+
+            color: #8490aa;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =================================================
+           SECURITY CHECKLIST
+        ================================================= */
+
+        .security-check {
+
+            display: grid;
+
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+            margin-bottom: 100px;
+        }
+
+
+        .check-list {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 14px;
+        }
+
+
+        .check-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 14px;
+
+            padding: 17px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.07);
+
+            border-radius: 14px;
+
+            background:
+                rgba(255,255,255,.025);
+        }
+
+
+        .check-mark {
+
+            flex-shrink: 0;
+
+            width: 28px;
+
+            height: 28px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            background:
+                rgba(0,217,255,.1);
+
+            color: #00d9ff;
+
+            font-size: 13px;
+
+            font-weight: 900;
+        }
+
+
+        .check-item strong {
+
+            display: block;
+
+            margin-bottom: 4px;
+
+            font-size: 14px;
+        }
+
+
+        .check-item p {
+
+            color: #78849e;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =================================================
+           SECURITY TERMINAL
+        ================================================= */
+
+        .terminal {
+
+            padding: 25px;
+
+            border:
+                1px solid
+                rgba(0,217,255,.18);
+
+            border-radius: 18px;
+
+            background:
+                rgba(2,10,18,.8);
+
+            box-shadow:
+                0 20px 60px
+                rgba(0,0,0,.3);
+        }
+
+
+        .terminal-top {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .terminal-dot {
+
+            width: 9px;
+
+            height: 9px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.25);
+        }
+
+
+        .terminal-title {
+
+            margin-left: 8px;
+
+            color: #6f7d99;
+
+            font-size: 11px;
+        }
+
+
+        .terminal-code {
+
+            color: #91a0bb;
+
+            font-family:
+                "Courier New",
+                monospace;
+
+            font-size: 12px;
+
+            line-height: 2;
+        }
+
+
+        .terminal-code .cyan {
+
+            color: #00d9ff;
+        }
+
+
+        .terminal-code .green {
+
+            color: #7ee787;
+        }
+
+
+        .terminal-code .yellow {
+
+            color: #e3b341;
+        }
+
+
+        /* =================================================
+           DISCLAIMER
+        ================================================= */
+
+        .security-note {
+
+            margin-top: 25px;
+
+            padding: 18px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.07);
+
+            border-radius: 13px;
+
+            color: #6f7c97;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+        ================================================= */
+
+        @media (max-width: 850px) {
+
+            .security-hero-card {
+
+                grid-template-columns: 1fr;
+
+                padding: 35px;
+
+            }
+
+
+            .security-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .security-check {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .security-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .security-hero-card {
+
+                padding: 25px;
+
+            }
+
+
+            .shield {
+
+                width: 170px;
+
+                height: 210px;
+
+            }
+
+
+            .shield-icon {
+
+                font-size: 55px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TECHNOLOGY BACKGROUND
+===================================================== -->
+
+<div class="tech-background">
+
+    <div class="grid-lines"></div>
+
+    <div class="glow glow-1"></div>
+
+    <div class="glow glow-2"></div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+
+        <a href="../index.html"
+           class="logo">
+
+            <div class="logo-3d">
+             <img src="images/I-Tech_fass-removebg-preview.png" alt="I-Tech Solutions Logo" class="logo-3d">
+                
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    I-Tech
+                </strong>
+
+                <small>
+                    Solutions
+                </small>
+
+            </div>
+
+        </a>
+
+
+
+        <nav class="navbar">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cyber-security.html">
+                Cyber Security
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <div class="auth-buttons">
+
+            <a href="login.html"
+               class="login-btn">
+
+                Login
+
+            </a>
+
+            <a href="signup.html"
+               class="signup-btn">
+
+                Sign Up
+
+            </a>
+
+        </div>
+
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section
+    class="page-hero"
+    style="
+    padding:100px 0 55px;
+    text-align:center;
+    ">
+
+    <div class="container">
+
+        <span class="technology-badge">
+
+            🔐 DIGITAL SECURITY CENTER
+
+        </span>
+
+
+        <h1
+            style="
+            margin:22px 0 15px;
+            font-size:clamp(40px,7vw,70px);
+            line-height:1;
+            ">
+
+            Stay
+            <strong style="color:#00d9ff;">
+                Protected
+            </strong>
+
+        </h1>
+
+
+        <p
+            style="
+            max-width:720px;
+            margin:auto;
+            color:#9ca8c7;
+            line-height:1.8;
+            ">
+
+            Practical cybersecurity awareness and
+            technology protection guidance for
+            computers, devices and digital accounts.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECURITY HERO
+===================================================== -->
+
+<section class="security-page">
+
+    <div class="container">
+
+
+        <div class="security-hero-card">
+
+
+            <div class="security-content">
+
+                <span class="technology-badge">
+
+                    🛡️ SECURITY FIRST
+
+                </span>
+
+
+                <h2>
+
+                    Protect Your
+                    <strong>Digital World</strong>
+
+                </h2>
+
+
+                <p>
+
+                    Modern computers and online accounts
+                    face many security risks. Good security
+                    starts with strong passwords, updates,
+                    backups, safe browsing and awareness.
+
+                </p>
+
+
+                <a href="contact.html"
+                   class="primary-btn">
+
+                    Get Security Help →
+
+                </a>
+
+            </div>
+
+
+
+            <div class="security-visual">
+
+                <div class="shield">
+
+                    <div class="shield-icon">
+                        🛡️
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SECURITY SERVICES
+        ================================================= -->
+
+        <div class="section-heading">
+
+            <span>
+                SECURITY SERVICES
+            </span>
+
+            <h2>
+
+                Security
+                <strong>Solutions</strong>
+
+            </h2>
+
+            <p>
+
+                We can help you understand and improve
+                the security of your everyday technology.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="security-grid">
+
+
+            <article class="security-card">
+
+                <div class="security-icon">
+                    🔑
+                </div>
+
+                <h3>
+                    Password Security
+                </h3>
+
+                <p>
+
+                    Guidance for creating stronger
+                    passwords and using password managers
+                    and multi-factor authentication.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="security-card">
+
+                <div class="security-icon">
+                    🦠
+                </div>
+
+                <h3>
+                    Malware Protection
+                </h3>
+
+                <p>
+
+                    Help with security software,
+                    suspicious files and safer computer
+                    usage practices.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="security-card">
+
+                <div class="security-icon">
+                    🔄
+                </div>
+
+                <h3>
+                    Updates & Patching
+                </h3>
+
+                <p>
+
+                    Keeping operating systems and
+                    applications updated reduces exposure
+                    to known security problems.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="security-card">
+
+                <div class="security-icon">
+                    💾
+                </div>
+
+                <h3>
+                    Backup Protection
+                </h3>
+
+                <p>
+
+                    Assistance with backup strategies
+                    to help protect important files
+                    against accidental loss.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="security-card">
+
+                <div class="security-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Safe Browsing
+                </h3>
+
+                <p>
+
+                    Learn how to recognize suspicious
+                    websites, downloads, messages and
+                    common online scams.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="security-card">
+
+                <div class="security-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Device Security
+                </h3>
+
+                <p>
+
+                    Basic security guidance for computers,
+                    laptops and other connected devices.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SECURITY CHECKLIST
+        ================================================= -->
+
+        <div class="security-check">
+
+
+            <div>
+
+                <div class="section-heading">
+
+                    <span>
+                        SECURITY CHECKLIST
+                    </span>
+
+                    <h2>
+
+                        Build Better
+                        <strong>Security Habits</strong>
+
+                    </h2>
+
+                </div>
+
+
+                <p style="
+                    color:#8793ad;
+                    font-size:14px;
+                    line-height:1.8;
+                ">
+
+                    Small security habits can make a
+                    significant difference to your everyday
+                    digital safety.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="check-list">
+
+
+                <div class="check-item">
+
+                    <div class="check-mark">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Use Strong Passwords
+                        </strong>
+
+                        <p>
+                            Avoid reusing the same password
+                            across important accounts.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="check-item">
+
+                    <div class="check-mark">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Enable Multi-Factor Authentication
+                        </strong>
+
+                        <p>
+                            Add another verification method
+                            wherever it is available.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="check-item">
+
+                    <div class="check-mark">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Keep Software Updated
+                        </strong>
+
+                        <p>
+                            Install trusted operating-system
+                            and application updates.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="check-item">
+
+                    <div class="check-mark">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Backup Important Files
+                        </strong>
+
+                        <p>
+                            Keep useful backups in a separate
+                            and trusted location.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="check-item">
+
+                    <div class="check-mark">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Think Before You Click
+                        </strong>
+
+                        <p>
+                            Verify unexpected links,
+                            attachments and messages.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TERMINAL
+        ================================================= -->
+
+        <div class="section-heading">
+
+            <span>
+                SECURITY MONITOR
+            </span>
+
+            <h2>
+
+                Technology
+                <strong>Awareness</strong>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="terminal">
+
+
+            <div class="terminal-top">
+
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+
+                <span class="terminal-title">
+                    i-tech-security-monitor
+                </span>
+
+            </div>
+
+
+            <div class="terminal-code">
+
+                <div>
+                    <span class="cyan">
+                        I-TECH
+                    </span>
+                    security monitor initialized...
+                </div>
+
+                <div>
+                    system_status:
+                    <span class="green">
+                        READY
+                    </span>
+                </div>
+
+                <div>
+                    protection_mode:
+                    <span class="green">
+                        AWARENESS
+                    </span>
+                </div>
+
+                <div>
+                    password_security:
+                    <span class="yellow">
+                        CHECK_REQUIRED
+                    </span>
+                </div>
+
+                <div>
+                    software_updates:
+                    <span class="yellow">
+                        VERIFY
+                    </span>
+                </div>
+
+                <div>
+                    backup_status:
+                    <span class="yellow">
+                        REVIEW
+                    </span>
+                </div>
+
+                <div>
+                    recommendation:
+                    <span class="cyan">
+                        STAY_ALERT
+                    </span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="security-note">
+
+            ⚠️ Cybersecurity information on this page
+            is intended for general awareness and
+            defensive protection. Security conditions
+            vary by device, software and environment.
+            For a specific issue, contact a qualified
+            technology professional.
+
+        </div>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================= -->
+
+        <div style="margin-top:80px;">
+
+            <div class="cta">
+
+                <div class="cta-content">
+
+                    <div>
+
+                        <span>
+                            NEED SECURITY HELP?
+                        </span>
+
+                        <h2>
+
+                            Secure Your
+                            <strong>Technology.</strong>
+
+                        </h2>
+
+                        <p>
+
+                            Contact I-Tech Solutions for
+                            computer security guidance and
+                            technology support.
+
+                        </p>
+
+                    </div>
+
+
+                    <a href="contact.html"
+                       class="primary-btn">
+
+                        Contact Security →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-column">
+
+                <div class="footer-logo">
+
+                    <div class="logo-3d">
+
+                        <span>I</span>
+                        <span>-</span>
+                        <span>T</span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            I-Tech Solutions
+                        </strong>
+
+                        <small>
+                            TECHNOLOGY • REPAIR • SECURITY
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <p>
+
+                    Computer repair, software solutions,
+                    accessories and technology support.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    QUICK LINKS
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    PRODUCTS
+                </h3>
+
+                <a href="products.html">
+                    Computers
+                </a>
+
+                <a href="products.html">
+                    Laptops
+                </a>
+
+                <a href="products.html">
+                    Accessories
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    SECURITY
+                </h3>
+
+                <a href="cyber-security.html">
+                    Cyber Security
+                </a>
+
+                <a href="contact.html">
+                    Get Help
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            ©
+            <span id="currentYear"></span>
+
+            I-Tech Solutions.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
