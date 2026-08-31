@@ -1,4 +1,4 @@
-# I-Tech Solutions
+# ITechSolutions101
 Welcome to I-Tech Solutions, your one-stop shop for all your computer needs. We are committed to providing top-quality products and efficient services at affordable prices.
 About Us
 At I-Tech Solutions, we offer a wide range of computer accessories and cutting-edge software and applications. Our team ensures that every product and service meets the highest standards of quality and precision.
