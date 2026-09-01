@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Contact I-Tech Solutions for computer repair, laptop repair, software and IT support.">
+
+    <title>Contact | I-Tech Solutions</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <style>
+
+        /* =================================================
+           CONTACT PAGE
+        ================================================= */
+
+        .contact-page {
+            padding: 70px 0 100px;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+
+        .contact-info,
+        .contact-form-box {
+            padding: 32px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 22px;
+            background: rgba(255,255,255,.03);
+        }
+
+        .contact-info h2,
+        .contact-form-box h2 {
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+
+        .contact-info > p,
+        .contact-form-box > p {
+            color: #8490aa;
+            line-height: 1.8;
+            font-size: 13px;
+            margin-bottom: 28px;
+        }
+
+        /* =================================================
+           CONTACT ITEMS
+        ================================================= */
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 17px;
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 14px;
+            background: rgba(255,255,255,.025);
+        }
+
+        .contact-icon {
+            flex-shrink: 0;
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 11px;
+            background: rgba(0,217,255,.08);
+            border: 1px solid rgba(0,217,255,.18);
+            font-size: 19px;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+
+        .contact-item a,
+        .contact-item span {
+            color: #8290ac;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            transition: .3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #00d9ff;
+        }
+
+        /* =================================================
+           FORM
+        ================================================= */
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            color: #b8c2d8;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 10px;
+            outline: none;
+            background: rgba(255,255,255,.04);
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 13px;
+            transition: .3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: rgba(0,217,255,.55);
+            box-shadow: 0 0 0 3px rgba(0,217,255,.06);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-group select option {
+            background: #08121c;
+            color: #ffffff;
+        }
+
+        .submit-area {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .form-note {
+            color: #65718a;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        /* =================================================
+           WHATSAPP
+        ================================================= */
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 18px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background: rgba(37,211,102,.1);
+            border: 1px solid rgba(37,211,102,.25);
+            color: #7ee7a0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            transition: .3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: rgba(37,211,102,.18);
+            transform: translateY(-2px);
+        }
+
+        /* =================================================
+           HOURS
+        ================================================= */
+
+        .hours-section {
+            margin-bottom: 80px;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .hours-card {
+            padding: 24px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 17px;
+            background: rgba(255,255,255,.025);
+        }
+
+        .hours-card span {
+            display: block;
+            color: #00d9ff;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .hours-card strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .hours-card p {
+            color: #7d89a3;
+            font-size: 12px;
+        }
+
+        /* =================================================
+           MAP / LOCATION
+        ================================================= */
+
+        .location-section {
+            margin-bottom: 80px;
+        }
+
+        .location-box {
+            min-height: 300px;
+            position: relative;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            border: 1px solid rgba(0,217,255,.12);
+            border-radius: 22px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,217,255,.06),
+                    rgba(255,255,255,.02)
+                );
+        }
+
+        .map-grid {
+            position: absolute;
+            inset: 0;
+            opacity: .35;
+            background-image:
+                linear-gradient(
+                    rgba(0,217,255,.12) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(0,217,255,.12) 1px,
+                    transparent 1px
+                );
+            background-size: 45px 45px;
+            transform: perspective(400px) rotateX(35deg) scale(1.3);
+        }
+
+        .location-pin {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .location-pin-icon {
+            font-size: 55px;
+            filter:
+                drop-shadow(
+                    0 0 18px
+                    rgba(0,217,255,.6)
+                );
+            animation:
+                pinFloat 2.5s ease-in-out infinite;
+        }
+
+        @keyframes pinFloat {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+        }
+
+        .location-pin h3 {
+            margin: 10px 0 6px;
+            font-size: 21px;
+        }
+
+        .location-pin p {
+            color: #7f8ba5;
+            font-size: 12px;
+        }
+
+        /* =================================================
+           FAQ
+        ================================================= */
+
+        .faq-section {
+            margin-bottom: 80px;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .faq-item {
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 13px;
+            background: rgba(255,255,255,.025);
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: 17px 20px;
+            cursor: pointer;
+            color: #c6cede;
+            font-size: 13px;
+            font-weight: 600;
+            list-style: none;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            float: right;
+            color: #00d9ff;
+            font-size: 18px;
+        }
+
+        .faq-item[open] summary::after {
+            content: "−";
+        }
+
+        .faq-answer {
+            padding: 0 20px 18px;
+            color: #78849d;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        /* =================================================
+           RESPONSIVE
+        ================================================= */
+
+        @media (max-width: 850px) {
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full,
+            .submit-area {
+                grid-column: auto;
+            }
+
+            .submit-area {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .contact-info,
+            .contact-form-box {
+                padding: 23px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TECHNOLOGY BACKGROUND
+===================================================== -->
+
+<div class="tech-background">
+
+    <div class="grid-lines"></div>
+
+    <div class="glow glow-1"></div>
+
+    <div class="glow glow-2"></div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="../index.html"
+           class="logo">
+
+            <div class="logo-3d">
+             <img src="images/I-Tech_fass-removebg-preview.png" alt="I-Tech Solutions Logo" class="logo-3d">
+                
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    I-Tech
+                </strong>
+
+                <small>
+                    Solutions
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <nav class="navbar">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cyber-security.html">
+                Cyber Security
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="auth-buttons">
+
+            <a href="login.html"
+               class="login-btn">
+
+                Login
+
+            </a>
+
+            <a href="signup.html"
+               class="signup-btn">
+
+                Sign Up
+
+            </a>
+
+        </div>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="page-hero"
+    style="
+    padding:100px 0 55px;
+    text-align:center;
+    ">
+
+    <div class="container">
+
+        <span class="technology-badge">
+
+            📞 I-TECH SUPPORT CENTER
+
+        </span>
+
+
+        <h1
+            style="
+            margin:22px 0 15px;
+            font-size:clamp(42px,7vw,72px);
+            line-height:1;
+            ">
+
+            Let's
+            <strong style="color:#00d9ff;">
+                Connect
+            </strong>
+
+        </h1>
+
+
+        <p
+            style="
+            max-width:700px;
+            margin:auto;
+            color:#9ca8c7;
+            line-height:1.8;
+            ">
+
+            Have a computer problem, need an accessory,
+            or looking for software and IT support?
+            Send us your enquiry.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT SECTION
+===================================================== -->
+
+<section class="contact-page">
+
+    <div class="container">
+
+
+        <div class="contact-layout">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <span class="technology-badge">
+                    CONTACT INFORMATION
+                </span>
+
+                <h2>
+                    Get in Touch
+                </h2>
+
+                <p>
+                    Replace the sample details below with
+                    your actual I-Tech Solutions business
+                    information before publishing.
+                </p>
+
+
+                <div class="contact-items">
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📞
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Phone
+                            </strong>
+
+                            <a href="tel:+916372407775">
+                                +91 6372407775
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Email
+                            </strong>
+
+                            <a href="mailto:itechsolutions24hours@gmail.com">
+                                itechsolutions24hours@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Address
+                            </strong>
+
+                            <span>
+                                Old Bus-Stand Near Municipality Office,
+                                Khordha, India
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            🛠️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Services
+                            </strong>
+
+                            <span>
+                                Computer • Laptop • Software
+                                • Accessories • IT Support
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    href="https://wa.me/6372407775"
+                    class="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener">
+
+                    💬 WhatsApp Us
+
+                </a>
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-box">
+
+                <span class="technology-badge">
+                    SEND ENQUIRY
+                </span>
+
+                <h2>
+                    How Can We Help?
+                </h2>
+
+                <p>
+                    Fill in the form and tell us what
+                    you need. This demo form will show
+                    a confirmation message in the browser.
+                </p>
+
+
+                <form
+                    class="contact-form"
+                    id="contactForm">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+91">
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            Service
+                        </label>
+
+                        <select
+                            id="service"
+                            name="service">
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option>
+                                Computer Repair
+                            </option>
+
+                            <option>
+                                Laptop Repair
+                            </option>
+
+                            <option>
+                                Software Installation
+                            </option>
+
+                            <option>
+                                Data & Storage
+                            </option>
+
+                            <option>
+                                Networking
+                            </option>
+
+                            <option>
+                                Cyber Security
+                            </option>
+
+                            <option>
+                                Accessories
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group full">
+
+                        <label for="message">
+                            Message *
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell us about your requirement..."
+                            required></textarea>
+
+                    </div>
+
+
+
+                    <div class="submit-area">
+
+                        <span class="form-note">
+
+                            * Required fields
+
+                        </span>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn">
+
+                            Send Enquiry →
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             BUSINESS HOURS
+        ================================================= -->
+
+        <section class="hours-section">
+
+            <div class="section-heading">
+
+                <span>
+                    BUSINESS HOURS
+                </span>
+
+                <h2>
+                    When We're
+                    <strong>Available</strong>
+                </h2>
+
+            </div>
+
+
+            <div class="hours-grid">
+
+
+                <div class="hours-card">
+
+                    <span>
+                        🗓️
+                    </span>
+
+                    <strong>
+                        Monday – Saturday
+                    </strong>
+
+                    <p>
+                        9:00 AM – 8:00 PM
+                    </p>
+
+                </div>
+
+
+
+                <div class="hours-card">
+
+                    <span>
+                        ☀️
+                    </span>
+
+                    <strong>
+                        Sunday
+                    </strong>
+
+                    <p>
+                        10:00 AM – 4:00 PM
+                    </p>
+
+                </div>
+
+
+
+                <div class="hours-card">
+
+                    <span>
+                        🚨
+                    </span>
+
+                    <strong>
+                        Support
+                    </strong>
+
+                    <p>
+                        Contact us for availability
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LOCATION
+        ================================================= -->
+
+        <section class="location-section">
+
+            <div class="section-heading">
+
+                <span>
+                    OUR LOCATION
+                </span>
+
+                <h2>
+                    Find
+                    <strong>I-Tech Solutions</strong>
+                </h2>
+
+            </div>
+
+
+            <div class="location-box">
+<img src="images/map.jpg" class="location-box" alt="">
+                <div class="map-grid"></div>
+
+                <div class="location-pin">
+
+                    <div class="location-pin-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        I-Tech Solutions
+                    </h3>
+
+                    <p>
+                        
+<a href = "https://maps.app.goo.gl/4HCAGayQegRDGyPVA?g_st=ic">
+State Bank Of India, Christian Sahi, Municipality Office Rd, Baseli Sahi, Khordha, Odisha 752055
+<a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FAQ
+        ================================================= -->
+
+        <section class="faq-section">
+
+            <div class="section-heading">
+
+                <span>
+                    FAQ
+                </span>
+
+                <h2>
+                    Frequently Asked
+                    <strong>Questions</strong>
+                </h2>
+
+            </div>
+
+
+            <div class="faq-list">
+
+
+                <details class="faq-item">
+
+                    <summary>
+                        Do you repair both computers and laptops?
+                    </summary>
+
+                    <div class="faq-answer">
+
+                        Yes. I-Tech Solutions can offer
+                        computer and laptop diagnostics,
+                        maintenance, repair and upgrade
+                        services.
+
+                    </div>
+
+                </details>
+
+
+
+                <details class="faq-item">
+
+                    <summary>
+                        Do you provide software installation?
+                    </summary>
+
+                    <div class="faq-answer">
+
+                        Software installation and setup
+                        can be provided for legitimate,
+                        properly licensed software.
+
+                    </div>
+
+                </details>
+
+
+
+                <details class="faq-item">
+
+                    <summary>
+                        Can I ask about a product before visiting?
+                    </summary>
+
+                    <div class="faq-answer">
+
+                        Yes. You can send an enquiry about
+                        a computer, laptop, accessory or
+                        other technology product.
+
+                    </div>
+
+                </details>
+
+
+
+                <details class="faq-item">
+
+                    <summary>
+                        How do I get a repair estimate?
+                    </summary>
+
+                    <div class="faq-answer">
+
+                        Send us the device problem through
+                        the contact form or contact the shop.
+                        A final estimate may require device
+                        inspection.
+
+                    </div>
+
+                </details>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================= -->
+
+        <div class="cta">
+
+            <div class="cta-content">
+
+                <div>
+
+                    <span>
+                        I-TECH SOLUTIONS
+                    </span>
+
+                    <h2>
+
+                        Your Tech.
+                        <strong>Our Solution.</strong>
+
+                    </h2>
+
+                    <p>
+
+                        Computer repair, software,
+                        accessories and technology support.
+
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="services.html"
+                    class="primary-btn">
+
+                    View Services →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-column">
+
+                <div class="footer-logo">
+
+                    <div class="logo-3d">
+<img src="images/I-Tech_fass-removebg-preview.png" alt="I-Tech Solutions Logo" class="logo-3d">
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            I-Tech Solutions
+                        </strong>
+
+                        <small>
+                            TECHNOLOGY • REPAIR • SECURITY
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Computer repair, software solutions,
+                    accessories and technology support.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    QUICK LINKS
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    PRODUCTS
+                </h3>
+
+                <a href="products.html">
+                    Computers
+                </a>
+
+                <a href="products.html">
+                    Laptops
+                </a>
+
+                <a href="products.html">
+                    Accessories
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    SUPPORT
+                </h3>
+
+                <a href="cyber-security.html">
+                    Cyber Security
+                </a>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            ©
+            <span id="currentYear"></span>
+
+            I-Tech Solutions.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../js/script.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        /*
+         * Read product name from Products page.
+         * Example:
+         * contact.html?product=SSD%20Storage
+         */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+        const product =
+            params.get("product");
+
+
+        if (product) {
+
+            const message =
+                document.getElementById(
+                    "message"
+                );
+
+            const service =
+                document.getElementById(
+                    "service"
+                );
+
+
+            if (message) {
+
+                message.value =
+                    "I am interested in: " +
+                    product +
+                    "\n\nMy requirement: ";
+
+            }
+
+
+            if (service) {
+
+                service.value =
+                    "Accessories";
+
+            }
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
